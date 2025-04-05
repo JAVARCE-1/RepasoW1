@@ -23,8 +23,15 @@ namespace RepasoW1
                 Console.WriteLine("El numero es impar");
             }
 
- 
+            int PrimerNumero, SegundoNumero, tercerNumero;
+            Console.WriteLine("");
+            Console.WriteLine("=============================");
+            Console.WriteLine("Cual es el numero mayor de 3 numeros");
+            PrimerNumero = Convert.ToInt32(Console.ReadLine());
+            SegundoNumero = Convert.ToInt32(Console.ReadLine());
+            tercerNumero = Convert.ToInt32(Console.ReadLine());
 
+ 
 
         }
     }

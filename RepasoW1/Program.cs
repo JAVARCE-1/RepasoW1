@@ -53,19 +53,19 @@ namespace RepasoW1
             Console.WriteLine("=============================");
             Console.WriteLine("Base la opcion de que area es para comprobar");
             Console.WriteLine("");
-            Console.WriteLine("Ingresar la opcion: (1-circulo)  o (2-cuadrado)");
+            Console.WriteLine("Ingresar la opcion: (1-cuadrado)  o (2-circulo)");
             int opcion = 0, lado, radio; 
                 double area;
             switch (opcion)
             {
                 case 1:
-                    Console.WriteLine("Ingrese el valor del lado:");
+                    Console.WriteLine("Cuadrado -> Ingrese el valor del lado:");
                     lado = Convert.ToInt32(Console.ReadLine());
                     area = lado * lado;
                     Console.WriteLine("El area del cuadrado es: " + area);
                     return;
                 case 2:
-                    Console.WriteLine("Ingrese el valor de la radio:");
+                    Console.WriteLine("Circulo -> Ingrese el valor de la radio:");
                     radio = Convert.ToInt32(Console.ReadLine());
                     area = Math.PI * Math.Pow(radio, 2);
                     Console.WriteLine("El area del circulo es: " + area);
@@ -75,7 +75,7 @@ namespace RepasoW1
                     return;
             }
 
-
+            
             PrimerNumero = Convert.ToInt32(Console.ReadLine());
 
 

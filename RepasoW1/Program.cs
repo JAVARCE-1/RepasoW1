@@ -23,6 +23,7 @@ namespace RepasoW1
                 Console.WriteLine("El numero es impar");
             }
 
+
             int PrimerNumero, SegundoNumero, tercerNumero;
             Console.WriteLine("");
             Console.WriteLine("=============================");
@@ -31,7 +32,13 @@ namespace RepasoW1
             SegundoNumero = Convert.ToInt32(Console.ReadLine());
             tercerNumero = Convert.ToInt32(Console.ReadLine());
 
- 
+
+            //obtener el area del circulo o cuadrado
+            Console.WriteLine("");
+            Console.WriteLine("=============================");
+            Console.WriteLine("Base la opcion de que area es para comprobar");
+            PrimerNumero = Convert.ToInt32(Console.ReadLine());
+
 
         }
     }

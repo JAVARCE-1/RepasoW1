@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepasoW1", "RepasoW1\Repaso
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WhileLoop", "WhileLoop\WhileLoop.csproj", "{94ABED79-1AF7-452E-BFDB-7623EEB2BE64}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "W1_Loop_Tarea", "W1_Loop_Tarea\W1_Loop_Tarea.csproj", "{C049960B-1003-4BB8-A446-82E5141878C9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{94ABED79-1AF7-452E-BFDB-7623EEB2BE64}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{94ABED79-1AF7-452E-BFDB-7623EEB2BE64}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{94ABED79-1AF7-452E-BFDB-7623EEB2BE64}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C049960B-1003-4BB8-A446-82E5141878C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C049960B-1003-4BB8-A446-82E5141878C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C049960B-1003-4BB8-A446-82E5141878C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C049960B-1003-4BB8-A446-82E5141878C9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

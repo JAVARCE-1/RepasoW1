@@ -54,25 +54,31 @@
             // 1 2 3 4 *
             // 1 2 3 4 5
 
-            Console.WriteLine("----------------------------");
             Console.WriteLine("");
-            inicio = 1;
+            Console.WriteLine("=========================================");
+            Console.WriteLine("Imprimir cuadrado con patrones de 1 al 5 ");
+            Console.WriteLine("-----------------------------------------");
+            Console.WriteLine("");
+            // 2- Imprimir cuadrado con patrones de 1 al 5
+              inicio = 1;
             while (inicio <= 5)
             {
                 int b = 1;
-                while (b <= inicio)
-                {
-                    Console.Write(b + " ");
-                    b++;
-                }
-
                 while (b <= 5)
+
                 {
-                    Console.Write("* ");
+                    if (b <= inicio)
+                    {
+                        Console.Write(b + " ");
+                    }
+                    else
+                    {
+                        Console.Write("* ");
+                    }
                     b++;
                 }
 
-                Console.WriteLine();
+                Console.WriteLine("");
                 inicio++;
             }
 

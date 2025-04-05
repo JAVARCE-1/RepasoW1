@@ -32,8 +32,20 @@ namespace RepasoW1
             SegundoNumero = Convert.ToInt32(Console.ReadLine());
             tercerNumero = Convert.ToInt32(Console.ReadLine());
 
-            int mayor;
-            if 
+            int numeroMayor;
+            if (PrimerNumero > SegundoNumero && PrimerNumero > tercerNumero)
+            {
+                numeroMayor = PrimerNumero;
+            }
+            else if (SegundoNumero > PrimerNumero && SegundoNumero > tercerNumero)
+            {
+                numeroMayor = SegundoNumero;
+            }
+            else
+            {
+                numeroMayor = tercerNumero;
+            }
+            Console.WriteLine("El numero mayor es :"+ numeroMayor);
 
 
             //obtener el area del circulo o cuadrado

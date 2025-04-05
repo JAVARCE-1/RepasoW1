@@ -31,6 +31,7 @@
                 Console.WriteLine("La tabla del numero: " + valorTabla + " es igual a " + valorTabla + "x" + contadorTabla + " = " + resultado);
                 contadorTabla++;
             }
+            */
          
             // Imprimir cuadrado con patrones de 1 al 5
             int inicio = 1;
@@ -44,7 +45,7 @@
                 }
                 Console.WriteLine();
                 inicio++;
-            }   */
+            }
 
             // Ejercicio de while loop
             // 1 * * * *
@@ -53,7 +54,9 @@
             // 1 2 3 4 *
             // 1 2 3 4 5
 
-            int inicio = 1;
+            Console.WriteLine("----------------------------");
+            Console.WriteLine("");
+            inicio = 1;
             while (inicio <= 5)
             {
                 int b = 1;

@@ -1,5 +1,5 @@
-Se adiciona el proyecto (W1_Loop_Tarea) con la solución del desafio 1 y 2:
-         1- Challenge
+Se adiciona el proyecto (W1_Loop_Tarea) con la solución del desafio:
+1- Challenge:
          Write a program in C# Sharp to display the multiplication table of a given integer.
              Test Data:
          Input the number(Table to be calculated) : 15
@@ -8,5 +8,5 @@ Se adiciona el proyecto (W1_Loop_Tarea) con la solución del desafio 1 y 2:
          ...
          15 X 10 = 150
 
-         2- Challenge
+2- Challenge:
          EL mismo patron que hicimos con while pero con for

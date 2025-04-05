@@ -69,11 +69,10 @@
             }
 
 
-            //fin del programa
+            //Fin del programa
             Console.WriteLine("");
             Console.WriteLine("Fin del Programa..");
             Console.ReadKey();
-
 
         }
     }

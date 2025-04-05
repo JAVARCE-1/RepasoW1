@@ -52,6 +52,25 @@ namespace RepasoW1
             Console.WriteLine("");
             Console.WriteLine("=============================");
             Console.WriteLine("Base la opcion de que area es para comprobar");
+            Console.WriteLine("");
+            Console.WriteLine("Ingresar la opcion (1-circulo)  o (2-cuadrado)");
+            int opcion = 0, lado, area;
+            switch (opcion)
+            {
+                case 1:
+                    Console.WriteLine("ingrese el valor del lado:");
+                    lado = Convert.ToInt32(Console.ReadLine());
+                    area = lado * lado;
+                    return;
+                case 2:
+                    Console.WriteLine("");
+                    return;
+                default:
+                    Console.WriteLine("Operacion incorrecta");
+                    return;
+            }
+
+
             PrimerNumero = Convert.ToInt32(Console.ReadLine());
 
 

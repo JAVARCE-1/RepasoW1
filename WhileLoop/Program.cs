@@ -18,7 +18,7 @@
 
             // Tabla de multiplicar
             // 10 = 10x1, 10x2, 10x3.... 10x12
-            int contadorTabla = 1;
+            //int contadorTabla = 1;
             /*
             Console.WriteLine("Ingrese el valor de la tabla de multiplicar");
             int valorTabla;

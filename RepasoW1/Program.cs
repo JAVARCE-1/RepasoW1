@@ -32,6 +32,9 @@ namespace RepasoW1
             SegundoNumero = Convert.ToInt32(Console.ReadLine());
             tercerNumero = Convert.ToInt32(Console.ReadLine());
 
+            int mayor;
+            if 
+
 
             //obtener el area del circulo o cuadrado
             Console.WriteLine("");

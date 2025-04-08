@@ -119,6 +119,33 @@
             new Persona { Nombre = "Miguel", Edad = 19, Dni  = "7163235" }
         };
 
+            // Operaciones del reto
+            // Crear la lista, agregar los valores y hacer las operaciones
+            // Filtrar los libros con stock de mas de 10 unidades
+            // Filtrar el stock por precio mas grande de 10.99 soles
+            // Encontrar el indice del libro que empiece con "El"
+            Console.WriteLine("---------------------------------------");
+            Console.WriteLine("-------DESAFIO LIST de libros");
+            List<Libro> libros = new List<Libro>
+        {
+            new Libro {Nombre = "El principito",Precio = 25.99,Stock = 5,},
+            new Libro {Nombre = "libro2",Precio = 5.7,Stock = 16,},
+            new Libro {Nombre = "libro3",Precio = 23.99,Stock = 22,},
+            new Libro {Nombre = "libro4",Precio = 9.99,Stock = 7,}
+        };
+
+            Libro mayorStock = libros.Find(p => p.Stock > 10);
+            Console.WriteLine($"Libros : {mayorStock.Nombre}, con stock {mayorStock.Stock} ");
+
+            Libro mayorPrecio = libros.Find(p => p.Precio > 10.99);
+            Console.WriteLine($"Libro con el stock: {mayorPrecio.Stock}, y Precio {mayorPrecio.Stock} ");
+
+            int indiceMLetraLibro = libros.FindIndex(ii => ii.Nombre.StartsWith("El"));
+            Console.WriteLine($"Índice del Libro con nombre que empieza por 'El': {indiceMLetraLibro}");
+
+
+            Console.WriteLine("---------------------------------------");
+
             // Find - Encontrar la primera persona menor de 18 años
             Persona menor = personas.Find(p => p.Edad < 18);
             Console.WriteLine($"Primera persona menor de edad: {menor.Nombre}, {menor.Edad} años");
@@ -132,6 +159,13 @@
             // FindIndex - Encontrar el índice de la primera persona que empieza con 'M'
             int indiceMLetra = personas.FindIndex(p => p.Nombre.StartsWith("M"));
             Console.WriteLine($"Índice de la primera persona con nombre que empieza por 'M': {indiceMLetra}");
+
+
+            // Operaciones del reto
+            // Crear la lista, agregar los valores y hacer las operaciones
+            // Filtrar los libros con stock de mas de 10 unidades
+            // Filtrar el stock por precio mas grande de 10.99 soles
+            // Encontrar el indice del libro que empiece con "El"
         }
 
         // Clase auxiliar para demostraciones
@@ -141,5 +175,13 @@
             public int Edad { get; set; }
             public string Dni { get; set; }
         }
+
+        class Libro
+        {
+            public string Nombre { get; set; }
+            public double Precio { get; set; }
+            public int Stock { get; set; }
+        }
+
     }
 }

@@ -25,7 +25,9 @@
                 }
                 Console.Write("\n");
             }
-            Console.WriteLine("Se acabo el bucle");
+
+
+            Console.WriteLine("\nSe acabo el bucle");
 
         
     }

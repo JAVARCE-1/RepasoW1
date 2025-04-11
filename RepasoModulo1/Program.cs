@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Globalization;
 
 namespace RepasoModulo1
@@ -16,20 +17,21 @@ namespace RepasoModulo1
            
             int i, j, filas;
             /*
-                       Console.WriteLine("Ingresa el numero de filas");
-                       filas = Convert.ToInt32(Console.ReadLine());
-                       Console.WriteLine("");
+            Console.WriteLine("Ingresa el numero de filas");
+            //filas = Convert.ToInt32(Console.ReadLine());
+            filas = 4;
+            Console.WriteLine("");
 
-                       for (i = 1; i <= filas; i++)
-                       {
-                           for (j = 1; j <= i; j++)
-                           {
-                               Console.Write(j + " ");
-                           }
-                           Console.Write("\n");
-                       }
-                       Console.WriteLine("\nSe acabo el bucle");
-                       */
+            for (i = 1; i <= filas; i++)
+            {
+                for (j = 1; j <= i; j++)
+                {
+                    Console.Write(j + " ");
+                }
+                Console.Write("\n");
+            }
+            Console.WriteLine("\nSe acabo el bucle");
+            */
 
             /*
              * -----*
@@ -38,7 +40,6 @@ namespace RepasoModulo1
              * --* * * *
              * -* * * * *
              */
-
             /*
             Console.WriteLine("Ingresa el numero de filas");
               filas = 5;
@@ -56,76 +57,60 @@ namespace RepasoModulo1
 
                 Console.Write("\n");
             }
-
-              */
+            */
 
 
 
             //EJERCICIO encontrar Duplicados:
             Console.WriteLine("-----------------------------");
             Console.WriteLine("ENCONTRAR NUMEROS DUPLICADOS");
+            Console.WriteLine("-----------------------------");
             int[] numero = new int[] { 44, 44, 32, 55 ,66, 55,5,33,77,6,44};
+
             int[] numOrdenados = new int[numero.Length];
             int valorRepetido=0, indice=0;
-            ArrayList repetidos = new ArrayList();
+            int contarRepetido = 0;
+            //ArrayList repetidos = new ArrayList();
 
-            
             Array.Copy(numero, numOrdenados, numero.Length);
             Array.Sort(numOrdenados);
 
-            int contarRepetido = 0;
-            for  ( i = 0; i < numOrdenados.Length; i++)
+            Console.WriteLine("");
+            for (i = 0; i < numero.Length; i++)
+            {
+                if (i == 0)
+                    Console.Write($"Arreglo: {numero[i]}");
+                else
+                    Console.Write($" , {numero[i]}");
+            }
+            Console.WriteLine("\n");
+
+            Console.WriteLine("------------------");
+            Console.WriteLine("Listar duplicados:");
+            for (i = 0; i < numOrdenados.Length; i++)
             {
                 for (j = i; j < numOrdenados.Length; j++)
                 {
-
                     if (numOrdenados[i] == numOrdenados[j])
                     {
                         indice = Array.IndexOf(numOrdenados, numOrdenados[i]);
-                        //Console.WriteLine(" " + indice);
                         contarRepetido++;
-                        valorRepetido = numOrdenados[i];
+                        //valorRepetido = numOrdenados[i];
                     }
-                    //else
-                    //{
-                    //    contarRepetido = 1;
-                    //}
                 }
 
-
-                if (contarRepetido > 1 && numOrdenados[indice] == numOrdenados[i] ) 
+                if (contarRepetido > 1 && indice == i)
                 {
-                    Console.WriteLine(numOrdenados[i] +" repetidos" + contarRepetido);
-                    repetidos.Add(numOrdenados[i]);
+                    Console.WriteLine($"El numero {numOrdenados[i]} : Tiene {contarRepetido} duplicados");
+                    //repetidos.Add(numOrdenados[i]);
                 }
                 contarRepetido = 0;
 
             }
 
-            //foreach (int rep in repetidos)
-            //{
-            //    Console.WriteLine(" repetida: " +rep);
-            //}
 
 
-            //if (contarRepetido > 1)
-            //{
-            //    Console.WriteLine($"\n El número {numero[i]}  se repite : {contarRepetido} veces");
-            //}
-            //contarRepetido = 0;
 
-            /*
-            //bool contiene = numero.Contains(3.14);
-
-            indice = Array.IndexOf(numero, item);
-            if (indice == anterior)
-            {
-                Console.WriteLine($"\n Valor repetido {item} en el índice: {indice}");
-            }
-
-            anterior = indice;
-            indice = -1;
-            */
 
         }
     }

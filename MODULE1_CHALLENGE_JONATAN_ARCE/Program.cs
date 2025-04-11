@@ -42,7 +42,7 @@
             const int LISTAR = 2;
             const int MODIFICAR = 3;
             const int BUSCAR = 4;
-            const int ADICIONAR = 5;
+            //const int ADICIONAR = 5;
 
             switch (opcion)
             {
@@ -67,11 +67,11 @@
                         Console.WriteLine("BUSCAR");
                         break;
                     }
-                case ADICIONAR:
-                    {
-                        Console.WriteLine("ADICIONAR");
-                        break;
-                    }
+                //case ADICIONAR:
+                //    {
+                //        Console.WriteLine("ADICIONAR");
+                //        break;
+                //    }
 
                 default:
                     {
@@ -94,12 +94,12 @@
             Console.WriteLine("     2. Opción 2");
             Console.WriteLine("     3. Opción 3");
             Console.WriteLine("     4. Opción 3");
-            Console.WriteLine("     5. Opción 3");
+            //Console.WriteLine("     5. Opción 3");
             Console.WriteLine("     6. Salir");
             Console.WriteLine("--------------------------");
             Console.WriteLine("");
 
-            while (opcion != 7)
+            while (opcion != 6)
             {
                 Console.WriteLine("Ingrese su opcion: ");
                 if (int.TryParse(Console.ReadLine(), out opcion) == false)
@@ -119,10 +119,14 @@
         public static void currencyConvert(string origen)
         {
             var monedas = InicializarMonedas();
-
-
-            Console.WriteLine("\nOpciones:");
+            int monedaOrigen, monedaDestino;
+            decimal importe, importeCalculado = 0;
             string[] valorMoneda = new string[2];
+
+            Console.WriteLine("");
+            Console.WriteLine("--------------------------");
+            Console.WriteLine("\nOpciones Moneda:");
+
             foreach (var filas in monedas)
             {
 
@@ -137,21 +141,56 @@
                 Console.WriteLine("");
             }
 
-            int monedaOrigen, monedaDestino;
+
             Console.WriteLine($" Seleccione la moneda origen: ");
             if (int.TryParse(Console.ReadLine(), out monedaOrigen) == false)
             {
                 Console.WriteLine("Debe ingresar solo valores númericos");
                 return;
             }
+            else
+            {
+                if ((monedas.ContainsKey(monedaOrigen)) == false)
+                {
+                    Console.WriteLine($"la Opcion de la moneda no es valida");
+                    return;
+                }
+            }
+
+            Console.WriteLine($" ingrese el importe: ");
+            if (decimal.TryParse(Console.ReadLine(), out importe) == false)
+            {
+                Console.WriteLine("Debe ingresar solo valores númericos");
+                return;
+            }
+
             Console.WriteLine($" Seleccione la moneda a convertir: ");
             if (int.TryParse(Console.ReadLine(), out monedaDestino) == false)
             {
                 Console.WriteLine("Debe ingresar solo valores númericos");
                 return;
             }
+            else
+            {
+                if ((monedas.ContainsKey(monedaDestino)) == false)
+                {
+                    Console.WriteLine($"la Opcion de la moneda no es valida");
+                    return;
+                }
+            }
 
-            Console.WriteLine($"Se Convertira la moneda: {monedaOrigen} a {monedaDestino} ");
+            Console.WriteLine($"la Conversión del importe de {importe} en {monedaOrigen} se convertira a  {monedaDestino} ");
+
+            if (monedaOrigen == 1 && monedaDestino == 2)
+            {
+                importeCalculado = importe * 0.27m;
+            }
+            else if (monedaOrigen == 1 && monedaDestino == 3)
+            {
+                importeCalculado = importe * 0.27m * 0.92m;
+            }
+            Console.WriteLine($"  {importeCalculado.ToString()}");
+
         }
 
         public static Dictionary<int, string[]> InicializarMonedas()

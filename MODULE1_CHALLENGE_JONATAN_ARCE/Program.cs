@@ -44,12 +44,15 @@
             const int BUSCAR = 4;
             //const int ADICIONAR = 5;
 
+            Console.WriteLine("");
             switch (opcion)
             {
                 case CONVERTIR:
                     {
-                        Console.WriteLine("CONVERTIR");
-                        currencyConvert("origen");
+                        Console.WriteLine("--------------------------");
+                        Console.WriteLine("--   CONVERTIR MONEDA   --");
+                        Console.WriteLine("--------------------------");
+                        currencyConvert();
                         break;
                     }
                 case LISTAR:
@@ -90,18 +93,19 @@
             Console.WriteLine("======================================");
             Console.WriteLine("");
             Console.WriteLine("==== Menú de Opciones ====");
-            Console.WriteLine("     1. Opción 1");
+            Console.WriteLine("     1. Convertir moneda");
             Console.WriteLine("     2. Opción 2");
             Console.WriteLine("     3. Opción 3");
             Console.WriteLine("     4. Opción 3");
             //Console.WriteLine("     5. Opción 3");
             Console.WriteLine("     6. Salir");
             Console.WriteLine("--------------------------");
-            Console.WriteLine("");
+            //Console.WriteLine("");
 
             while (opcion != 6)
             {
-                Console.WriteLine("Ingrese su opcion: ");
+                Console.WriteLine("");
+                Console.Write("Ingrese su opción: ");
                 if (int.TryParse(Console.ReadLine(), out opcion) == false)
                 {
                     Console.WriteLine("Debe ingresar solo valores númericos");
@@ -116,21 +120,19 @@
             Console.WriteLine("Fin de programa...");
         }
 
-        public static void currencyConvert(string origen)
+        public static void currencyConvert()
         {
             var monedas = InicializarMonedas();
             int monedaOrigen, monedaDestino;
             decimal importe, importeCalculado = 0;
             string[] valorMoneda = new string[2];
 
-            Console.WriteLine("");
-            Console.WriteLine("--------------------------");
             Console.WriteLine("\nOpciones Moneda:");
 
             foreach (var filas in monedas)
             {
 
-                Console.Write($" {filas.Key}");
+                Console.Write($"   {filas.Key}");
                 valorMoneda = filas.Value;
                 Console.Write(" - " + valorMoneda[0]);
 
@@ -140,9 +142,9 @@
                 //}
                 Console.WriteLine("");
             }
+            Console.WriteLine("--------------------------");
 
-
-            Console.WriteLine($" Seleccione la moneda origen: ");
+            Console.Write($" Seleccione la moneda origen: ");
             if (int.TryParse(Console.ReadLine(), out monedaOrigen) == false)
             {
                 Console.WriteLine("Debe ingresar solo valores númericos");
@@ -157,14 +159,7 @@
                 }
             }
 
-            Console.WriteLine($" ingrese el importe: ");
-            if (decimal.TryParse(Console.ReadLine(), out importe) == false)
-            {
-                Console.WriteLine("Debe ingresar solo valores númericos");
-                return;
-            }
-
-            Console.WriteLine($" Seleccione la moneda a convertir: ");
+            Console.Write($" Seleccione la moneda a convertir: ");
             if (int.TryParse(Console.ReadLine(), out monedaDestino) == false)
             {
                 Console.WriteLine("Debe ingresar solo valores númericos");
@@ -179,6 +174,15 @@
                 }
             }
 
+            Console.Write($" ingrese el importe: ");
+            if (decimal.TryParse(Console.ReadLine(), out importe) == false)
+            {
+                Console.WriteLine("Debe ingresar solo valores númericos: ");
+                return;
+            }
+
+
+            Console.WriteLine("");
             Console.WriteLine($"la Conversión del importe de {importe} en {monedaOrigen} se convertira a  {monedaDestino} ");
 
             if (monedaOrigen == 1 && monedaDestino == 2)
@@ -189,7 +193,7 @@
             {
                 importeCalculado = importe * 0.27m * 0.92m;
             }
-            Console.WriteLine($"  {importeCalculado.ToString()}");
+            Console.WriteLine($"Es {importeCalculado.ToString()}");
 
         }
 

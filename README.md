@@ -1,12 +1,8 @@
-Se adiciona el proyecto (W1_Loop_Tarea) con la solución del desafio:
-1- Challenge:
-         Write a program in C# Sharp to display the multiplication table of a given integer.
-             Test Data:
-         Input the number(Table to be calculated) : 15
-         Expected Output :
-         15 X 1 = 15...
-         ...
-         15 X 10 = 150
 
-2- Challenge:
-         EL mismo patron que hicimos con while pero con for
+Se actualiza el proyecto con la solución de los desafio:
+-DFCsharp_Week1_Mentor: (Programs.cs) Solución de Calculadora
+-W1_Loop_Tarea : (Programs.cs) Solución de desafio:
+		1-Write a program in C# Sharp to display the multiplication table of a given integer
+		2-Imprimir cuadrado con patrones 
+-Week2_List: (Programs.cs) Solución desafio: Crear la Lista, agregar los valores y filtros 
+-RepasoModulo1 : (Programs.cs) Solución del desafio, encontrar duplicados en un Arrays 
